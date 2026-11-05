@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Store","name":"Chuck's Reserve","description":"Independent thrift store on Historic Main Street in Garden Grove. Clothing, housewares, books, décor and everyday finds.","telephone":"+1-310-340-8988","address":{"@type":"PostalAddress","streetAddress":"12946 Main Street","addressLocality":"Garden Grove","addressRegion":"CA","postalCode":"92840","addressCountry":"US"},"openingHours":["Mo-Fr 07:00-13:00","Sa-Su 08:00-17:00"],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:00","closes":"13:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"08:00","closes":"17:00"}],"paymentAccepted":"Cash, Zelle","hasMap":"https://www.google.com/maps/search/?api=1&query=12946+Main+Street+Garden+Grove+CA+92840"}
+{"@context":"https://schema.org","@type":"Store","name":"Chuck's Reserve","description":"Independent thrift store on Historic Main Street in Garden Grove. Clothing, housewares, books, décor and everyday finds.","telephone":"+1-310-340-8988","address":{"@type":"PostalAddress","streetAddress":"12946 Main Street","addressLocality":"Garden Grove","addressRegion":"CA","postalCode":"92840","addressCountry":"US"},"openingHours":["Mo-Su 08:00-13:00","Mo-Su 17:00-22:00"],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:00","closes":"13:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"17:00","closes":"22:00"}],"paymentAccepted":"Cash, Zelle","hasMap":"https://www.google.com/maps/search/?api=1&query=12946+Main+Street+Garden+Grove+CA+92840"}
 </script>
 <style>
 :root{--ink:#3a1f2b;--pink:#e8508f;--hot:#ff2d87;--blush:#fbe3ea;--cream:#fff8f1;--rule:#d9a9b8;
@@ -183,13 +183,13 @@ footer p{margin:6px 0}
 <p class="kicker">Daily Schedule</p>
 <h2>Store <em>Hours</em></h2>
 <table><thead><tr><th>Day</th><th>Hours</th></tr></thead><tbody>
-<tr data-d="1"><td>Monday</td><td>7:00 AM – 1:00 PM</td></tr>
-<tr data-d="2"><td>Tuesday</td><td>7:00 AM – 1:00 PM</td></tr>
-<tr data-d="3"><td>Wednesday</td><td>7:00 AM – 1:00 PM</td></tr>
-<tr data-d="4"><td>Thursday</td><td>7:00 AM – 1:00 PM</td></tr>
-<tr data-d="5"><td>Friday</td><td>7:00 AM – 1:00 PM</td></tr>
-<tr data-d="6"><td>Saturday</td><td>8:00 AM – 5:00 PM</td></tr>
-<tr data-d="0"><td>Sunday</td><td>8:00 AM – 5:00 PM</td></tr>
+<tr data-d="1"><td>Monday</td><td>8:00 AM – 1:00 PM, 5:00 PM – 10:00 PM</td></tr>
+<tr data-d="2"><td>Tuesday</td><td>8:00 AM – 1:00 PM, 5:00 PM – 10:00 PM</td></tr>
+<tr data-d="3"><td>Wednesday</td><td>8:00 AM – 1:00 PM, 5:00 PM – 10:00 PM</td></tr>
+<tr data-d="4"><td>Thursday</td><td>8:00 AM – 1:00 PM, 5:00 PM – 10:00 PM</td></tr>
+<tr data-d="5"><td>Friday</td><td>8:00 AM – 1:00 PM, 5:00 PM – 10:00 PM</td></tr>
+<tr data-d="6"><td>Saturday</td><td>8:00 AM – 1:00 PM, 5:00 PM – 10:00 PM</td></tr>
+<tr data-d="0"><td>Sunday</td><td>8:00 AM – 1:00 PM, 5:00 PM – 10:00 PM</td></tr>
 </tbody></table>
 <p class="note">Hours may change for Main Street events—call to confirm.</p>
 </section>
@@ -234,13 +234,16 @@ footer p{margin:6px 0}
 <script>
 (function(){
 var n=new Date(new Date().toLocaleString("en-US",{timeZone:"America/Los_Angeles"}));
-var d=n.getDay(),m=n.getHours()*60+n.getMinutes(),wk=d>=1&&d<=5,o=wk?420:480,c=wk?780:1020;
+var d=n.getDay(),m=n.getHours()*60+n.getMinutes();
 var row=document.querySelector('tr[data-d="'+d+'"]');if(row)row.classList.add('today');
-var s=document.getElementById('status'),t=document.getElementById('statusText'),open=m>=o&&m<c;
+var s=document.getElementById('status'),t=document.getElementById('statusText');
+var morning=m>=480&&m<780,evening=m>=1020&&m<1320,open=morning||evening;
 s.classList.add(open?'open':'closed');
-if(open){t.textContent="Open now · until "+(wk?"1 PM":"5 PM");}
-else if(m<o){t.textContent="Closed now · opens today at "+(wk?"7 AM":"8 AM");}
-else{var nd=(d+1)%7,nw=nd>=1&&nd<=5;t.textContent="Closed now · opens tomorrow at "+(nw?"7 AM":"8 AM");}
+if(morning){t.textContent="Open now · until 1 PM";}
+else if(evening){t.textContent="Open now · until 10 PM";}
+else if(m<480){t.textContent="Closed now · opens today at 8 AM";}
+else if(m<1020){t.textContent="Closed now · opens today at 5 PM";}
+else{t.textContent="Closed now · opens tomorrow at 8 AM";}
 document.getElementById('yr').textContent=n.getFullYear();
 var auction={youtubeChannelId:"",youtubeVideoId:"",tiktokUsername:"",tiktokVideoId:""};
 function addFrame(host,src){var f=document.createElement("iframe");f.src=src;f.allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture;web-share";f.allowFullscreen=true;f.title=host==="ytFrame"?"YouTube live auction":"TikTok live auction";hostEl=document.getElementById(host);var off=hostEl.querySelector(".offline");if(off)off.remove();hostEl.appendChild(f);}
