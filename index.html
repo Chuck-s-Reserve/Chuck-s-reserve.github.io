@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Chuck’s Reserve · Independent Thrift Store on Historic Main Street, Garden Grove</title>
 <link rel="canonical" href="https://chucksreserve.org/">
-<meta name="description" content="Chuck’s Reserve is an independent thrift store at 12946 Main Street, Garden Grove, CA 92840. Clothing, housewares, books, décor and everyday finds. Cash &amp; Zelle. Donations welcome.">
+<meta name="description" content="Chuck’s Reserve is an independent thrift store at 12946 Main Street, Garden Grove, CA 92840. Clothing, housewares, books, décor, vintage tapes, and evening classes from 6 to 9 PM. Cash &amp; Zelle. Donations welcome.">
 <meta name="keywords" content="thrift store Garden Grove, Historic Main Street Garden Grove, secondhand clothing, donations Garden Grove, Chuck's Reserve">
 <meta name="theme-color" content="#e8508f">
 <meta property="og:type" content="website">
@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Store","name":"Chuck's Reserve","description":"Independent thrift store on Historic Main Street in Garden Grove. Clothing, housewares, books, décor and everyday finds.","telephone":"+1-310-340-8988","address":{"@type":"PostalAddress","streetAddress":"12946 Main Street","addressLocality":"Garden Grove","addressRegion":"CA","postalCode":"92840","addressCountry":"US"},"openingHours":["Mo-Su 08:00-13:00","Mo-Su 17:00-22:00"],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:00","closes":"13:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"17:00","closes":"22:00"}],"paymentAccepted":"Cash, Zelle","hasMap":"https://www.google.com/maps/search/?api=1&query=12946+Main+Street+Garden+Grove+CA+92840"}
+{"@context":"https://schema.org","@type":"Store","name":"Chuck's Reserve","description":"Independent thrift store on Historic Main Street in Garden Grove. Clothing, housewares, books, décor, vintage tapes, and evening classes from 6 to 9 PM.","telephone":"+1-310-340-8988","address":{"@type":"PostalAddress","streetAddress":"12946 Main Street","addressLocality":"Garden Grove","addressRegion":"CA","postalCode":"92840","addressCountry":"US"},"openingHours":["Mo-Su 08:00-13:00","Mo-Su 17:00-22:00"],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:00","closes":"13:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"17:00","closes":"22:00"}],"paymentAccepted":"Cash, Zelle","hasMap":"https://www.google.com/maps/search/?api=1&query=12946+Main+Street+Garden+Grove+CA+92840"}
 </script>
 <style>
 :root{--ink:#3a1f2b;--pink:#e8508f;--hot:#ff2d87;--blush:#fbe3ea;--cream:#fff8f1;--rule:#d9a9b8;
@@ -85,7 +85,9 @@ h3{font-family:"Playfair Display",serif;font-weight:700;font-size:1.2rem;margin:
 .lead:first-letter{font-family:"Abril Fatface",serif;float:left;font-size:3.6rem;line-height:.85;padding:4px 8px 0 0;color:var(--hot)}
 .head{font-family:"Playfair Display",serif;font-weight:900;text-transform:uppercase;font-size:1rem;letter-spacing:.04em;margin:0 0 4px;border-bottom:1px solid var(--ink);padding-bottom:4px}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-@media(min-width:720px){.grid{grid-template-columns:repeat(5,1fr)}}
+.programs{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.layout{display:grid;gap:16px}
+@media(min-width:720px){.grid{grid-template-columns:repeat(5,1fr)}.programs{grid-template-columns:repeat(4,1fr)}.layout{grid-template-columns:repeat(3,1fr)}}
 .card{background:#fff;border:1px solid #f0cbd8;border-radius:14px;padding:16px 12px;text-align:center;box-shadow:0 4px 14px rgba(232,80,143,.08);position:relative;overflow:hidden}
 .card:after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 40%,rgba(255,255,255,.7) 50%,transparent 60%);transform:translateX(-100%);animation:sweep 5s ease-in-out infinite}
 @keyframes sweep{60%,100%{transform:translateX(100%)}}
@@ -126,7 +128,7 @@ footer p{margin:6px 0}
 <a class="btn line" href="sms:+13103408988">Text</a>
 </div>
 <div id="status" class="badge"><span class="dot"></span><span id="statusText">Checking hours…</span></div>
-<nav><a href="#about">About</a><a href="#finds">Finds</a><a href="#live">Live Auction</a><a href="#hours">Hours</a><a href="#visit">Visit</a><a href="#donations">Donate</a><a href="#contact">Contact</a></nav>
+<nav><a href="#about">About</a><a href="#finds">Finds</a><a href="#shop">The Shop</a><a href="#evenings">Evenings</a><a href="#community">Community</a><a href="#live">Live Auction</a><a href="#hours">Hours</a><a href="#visit">Visit</a><a href="#donations">Donate</a><a href="#contact">Contact</a></nav>
 </header>
 
 <main>
@@ -154,6 +156,57 @@ footer p{margin:6px 0}
 </div>
 </section>
 
+
+
+<section id="shop">
+<p class="kicker">The Floor Plan</p>
+<h2>How the Shop <em>Works</em></h2>
+<p>The store is arranged so daytime browsing and evening gatherings can share the same room — books up front, vintage sound in the middle, and a quiet studio in back.</p>
+<div class="layout">
+<div class="box"><p class="head">Front — Books &amp; Rolling Racks</p>
+<p>The front of the shop is home to our books. Clothing racks are moving onto new casters so they can roll aside in the evening and open the floor for small groups, up to the number the city permits.</p></div>
+<div class="box"><p class="head">Middle — Retro Sound</p>
+<p>The middle of the store is dedicated to retro VHS, cassette tapes, and magnetic reel tape. Those titles are available for purchase. Once we have city permission, we also plan to rent the equipment so the tapes and reels can actually get used.</p></div>
+<div class="box"><p class="head">Back — The Studio</p>
+<p>Clothing hangs along the back walls, where it also helps quiet the room. In the back of the building, Star Goat Studios hosts a recording and acting studio and stage, including a soundproof recording room.</p></div>
+</div>
+</section>
+
+<section id="evenings">
+<p class="kicker">After Dark on Main</p>
+<h2>Evening <em>Calendar</em></h2>
+<p>Every day from 6:00 PM to 9:00 PM, we host gatherings in the cleared front of the shop. Activities include, but are not limited to, repurposing classes, confidence-building activities, live camera performance, art classes, music classes, book club, and knitting class.</p>
+<table><thead><tr><th>Day</th><th>Evening Program</th></tr></thead><tbody>
+<tr data-d="1"><td>Monday</td><td>6:00 PM – 9:00 PM · Classes &amp; gatherings</td></tr>
+<tr data-d="2"><td>Tuesday</td><td>6:00 PM – 9:00 PM · Classes &amp; gatherings</td></tr>
+<tr data-d="3"><td>Wednesday</td><td>6:00 PM – 9:00 PM · Classes &amp; gatherings</td></tr>
+<tr data-d="4"><td>Thursday</td><td>6:00 PM – 9:00 PM · Classes &amp; gatherings</td></tr>
+<tr data-d="5"><td>Friday</td><td>6:00 PM – 9:00 PM · Classes &amp; gatherings</td></tr>
+<tr data-d="6"><td>Saturday</td><td>6:00 PM – 9:00 PM · Classes &amp; gatherings</td></tr>
+<tr data-d="0"><td>Sunday</td><td>6:00 PM – 9:00 PM · Classes &amp; gatherings</td></tr>
+</tbody></table>
+<p class="note">Call or text <a href="tel:+13103408988">(310) 340-8988</a> to ask what’s on tonight. The lineup can change, and we add new gatherings as they come.</p>
+<div class="programs">
+<div class="card"><svg viewBox="0 0 48 48" fill="none" stroke="#e8306f" stroke-width="2.5" stroke-linejoin="round"><path d="M16 10h16l6 8-14 20L10 18z"/><path d="M10 18h28"/></svg><h3>Repurposing</h3><p>Give old pieces a new life</p></div>
+<div class="card"><svg viewBox="0 0 48 48" fill="none" stroke="#c9962c" stroke-width="2.5"><path d="M24 8l3 9h9l-7 6 3 9-8-6-8 6 3-9-7-6h9z"/></svg><h3>Confidence Building</h3><p>Activities that help you show up as yourself</p></div>
+<div class="card"><svg viewBox="0 0 48 48" fill="none" stroke="#e8306f" stroke-width="2.5" stroke-linejoin="round"><rect x="8" y="16" width="24" height="18" rx="2"/><path d="M32 22l8-4v16l-8-4z"/></svg><h3>Live Camera Performance</h3><p>On-camera work in the shop’s studio</p></div>
+<div class="card"><svg viewBox="0 0 48 48" fill="none" stroke="#c9962c" stroke-width="2.5" stroke-linejoin="round"><path d="M14 34a8 8 0 0016 0c0-8-8-12-8-20-4 6-8 12-8 20z"/><path d="M30 16c4 2 8 6 10 12"/></svg><h3>Art Class</h3><p>Make something with your hands</p></div>
+<div class="card"><svg viewBox="0 0 48 48" fill="none" stroke="#e8306f" stroke-width="2.5"><path d="M18 36V12l18-4v24"/><circle cx="14" cy="36" r="4"/><circle cx="32" cy="32" r="4"/></svg><h3>Music Class</h3><p>Play, listen, and learn together</p></div>
+<div class="card"><svg viewBox="0 0 48 48" fill="none" stroke="#c9962c" stroke-width="2.5" stroke-linejoin="round"><path d="M24 12c-5-4-12-4-16-2v28c4-2 11-2 16 2 5-4 12-4 16-2V10c-4-2-11-2-16 2zM24 12v28"/></svg><h3>Book Club</h3><p>Read it, then talk it through</p></div>
+<div class="card"><svg viewBox="0 0 48 48" fill="none" stroke="#e8306f" stroke-width="2.5"><circle cx="18" cy="18" r="8"/><path d="M24 22c8 2 14 8 14 16H16c0-4 2-8 6-10"/><path d="M14 18h8"/></svg><h3>Knitting Class</h3><p>Stitches, conversation, and calm</p></div>
+</div>
+</section>
+
+<section id="community">
+<p class="kicker">Neighbors Helping Neighbors</p>
+<h2>Here for the <em>Community</em></h2>
+<div class="cols">
+<div class="box"><p class="head">Clothing When You Need It</p>
+<p>If you are in need, you may receive a set of clothing once per week. Come in during open hours and ask — we are glad to help.</p></div>
+<div><p class="head">A Place to Stay Engaged</p>
+<p>We work with a workforce program that hires people recovering from a workplace injury, including those on workers’ compensation or medical leave. They help keep the shop going: watching the floor, running the register, folding clothes, and greeting guests.</p></div>
+</div>
+</section>
 
 <section id="live">
 <p class="kicker">Going Once, Going Twice</p>
@@ -191,6 +244,7 @@ footer p{margin:6px 0}
 <tr data-d="6"><td>Saturday</td><td>8:00 AM – 1:00 PM, 5:00 PM – 10:00 PM</td></tr>
 <tr data-d="0"><td>Sunday</td><td>8:00 AM – 1:00 PM, 5:00 PM – 10:00 PM</td></tr>
 </tbody></table>
+<p class="note">Evening programs run 6:00 PM – 9:00 PM. See the <a href="#evenings">evening calendar</a>.</p>
 <p class="note">Hours may change for Main Street events—call to confirm.</p>
 </section>
 
@@ -235,7 +289,7 @@ footer p{margin:6px 0}
 (function(){
 var n=new Date(new Date().toLocaleString("en-US",{timeZone:"America/Los_Angeles"}));
 var d=n.getDay(),m=n.getHours()*60+n.getMinutes();
-var row=document.querySelector('tr[data-d="'+d+'"]');if(row)row.classList.add('today');
+document.querySelectorAll('tr[data-d="'+d+'"]').forEach(function(row){row.classList.add('today');});
 var s=document.getElementById('status'),t=document.getElementById('statusText');
 var morning=m>=480&&m<780,evening=m>=1020&&m<1320,open=morning||evening;
 s.classList.add(open?'open':'closed');
