@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Chuck’s Reserve · Independent Thrift Store on Historic Main Street, Garden Grove</title>
 <link rel="canonical" href="https://chucksreserve.org/">
-<meta name="description" content="Chuck’s Reserve is an independent thrift store at 12946 Main Street, Garden Grove, CA 92840. Clothing, housewares, books, décor, vintage tapes, and evening classes from 6 to 9 PM. Cash &amp; Zelle. Donations welcome.">
+<meta name="description" content="Chuck’s Reserve is an independent thrift store at 12946 Main Street, Garden Grove, CA 92840. Clothing, housewares, books, décor, vintage tapes, evening classes from 6 to 9 PM, and a weekly auction. Cash &amp; Zelle. Donations welcome.">
 <meta name="keywords" content="thrift store Garden Grove, Historic Main Street Garden Grove, secondhand clothing, donations Garden Grove, Chuck's Reserve">
 <meta name="theme-color" content="#e8508f">
 <meta property="og:type" content="website">
@@ -87,7 +87,11 @@ h3{font-family:"Playfair Display",serif;font-weight:700;font-size:1.2rem;margin:
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .programs{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .layout{display:grid;gap:16px}
-@media(min-width:720px){.grid{grid-template-columns:repeat(5,1fr)}.programs{grid-template-columns:repeat(4,1fr)}.layout{grid-template-columns:repeat(3,1fr)}}
+.lot{display:grid;gap:18px}
+.lot-photos{display:grid;gap:12px}
+.lot-photos img{width:100%;height:auto;border-radius:14px;border:1px solid #e7c2cf;background:#fff;display:block}
+.bid{font-family:"Playfair Display",serif;font-weight:900;font-size:clamp(1.5rem,5vw,2.1rem);color:var(--hot);margin:10px 0 6px}
+@media(min-width:720px){.grid{grid-template-columns:repeat(5,1fr)}.programs{grid-template-columns:repeat(4,1fr)}.layout{grid-template-columns:repeat(3,1fr)}.lot{grid-template-columns:1.1fr .9fr;align-items:start}}
 .card{background:#fff;border:1px solid #f0cbd8;border-radius:14px;padding:16px 12px;text-align:center;box-shadow:0 4px 14px rgba(232,80,143,.08);position:relative;overflow:hidden}
 .card:after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 40%,rgba(255,255,255,.7) 50%,transparent 60%);transform:translateX(-100%);animation:sweep 5s ease-in-out infinite}
 @keyframes sweep{60%,100%{transform:translateX(100%)}}
@@ -128,7 +132,7 @@ footer p{margin:6px 0}
 <a class="btn line" href="sms:+13103408988">Text</a>
 </div>
 <div id="status" class="badge"><span class="dot"></span><span id="statusText">Checking hours…</span></div>
-<nav><a href="#about">About</a><a href="#finds">Finds</a><a href="#shop">The Shop</a><a href="#evenings">Evenings</a><a href="#community">Community</a><a href="#live">Live Auction</a><a href="#hours">Hours</a><a href="#visit">Visit</a><a href="#donations">Donate</a><a href="#contact">Contact</a></nav>
+<nav><a href="#about">About</a><a href="#finds">Finds</a><a href="#shop">The Shop</a><a href="#evenings">Evenings</a><a href="#community">Community</a><a href="#auction">Auction</a><a href="#live">Live Auction</a><a href="#hours">Hours</a><a href="#visit">Visit</a><a href="#donations">Donate</a><a href="#contact">Contact</a></nav>
 </header>
 
 <main>
@@ -205,6 +209,30 @@ footer p{margin:6px 0}
 <p>If you are in need, you may receive a set of clothing once per week. Come in during open hours and ask — we are glad to help.</p></div>
 <div><p class="head">A Place to Stay Engaged</p>
 <p>We work with a workforce program that hires people recovering from a workplace injury, including those on workers’ compensation or medical leave. They help keep the shop going: watching the floor, running the register, folding clothes, and greeting guests.</p></div>
+</div>
+</section>
+
+
+<section id="auction">
+<p class="kicker">On the Block</p>
+<h2>Weekly <em>Auction</em></h2>
+<p>Each week we put a special find on the block. Bid by phone or text, stop by the shop during open hours, or jump in when we go live.</p>
+<div class="lot">
+<div class="lot-photos">
+<img src="auction-porsche-917.jpg" alt="Vintage Schuco Porsche 917 toy car in silver-blue Gulf livery with a red center stripe and number 3" width="861" height="1600">
+<img src="auction-porsche-917-markings.jpg" alt="Red underside stamped Schuco 356 213, Porsche 917 Weltmeister 1970" width="1589" height="1600">
+</div>
+<div class="box">
+<p class="head">This Week’s Lot</p>
+<h3>Schuco Porsche 917 · Weltmeister 1970</h3>
+<p>A vintage Schuco toy marked 356 213 on the underside, with “Porsche 917 Weltmeister 1970,” plus the stamped figures 580 PS, 330 km/h, and 5000 ccm. It wears Gulf colors: silver-blue body, orange-red center stripe, number 3, and Gulf roundels on the nose.</p>
+<p class="bid">Starting bid $60</p>
+<p class="note">Call or text (310) 340-8988 to place a bid. Sold as shown — a well-loved shop find with the honest wear you can see in the photos.</p>
+<div class="ctas" style="justify-content:flex-start;margin-top:12px">
+<a class="btn pink" href="tel:+13103408988">Call to Bid</a>
+<a class="btn goldb" href="sms:+13103408988">Text to Bid</a>
+</div>
+</div>
 </div>
 </section>
 
