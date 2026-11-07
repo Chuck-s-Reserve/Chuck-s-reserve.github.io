@@ -103,6 +103,22 @@ th,td{text-align:left;padding:11px 12px;border-bottom:1px solid #f3d6e0}
 th{background:linear-gradient(135deg,#ff5fa2,#e8306f);color:#fff;font-family:"Playfair Display",serif;letter-spacing:.1em;text-transform:uppercase;font-size:.8rem}
 tr.today td{background:linear-gradient(90deg,#fff3c4,#ffe0ec);font-weight:600}
 tr.today td:first-child:after{content:" ✦ Today";color:var(--hot);font-size:.8rem}
+.weekcal{margin:18px 0;background:#fff;border:1px solid #e7c2cf;border-radius:16px;overflow:hidden;box-shadow:0 4px 14px rgba(232,80,143,.08)}
+.weekcal-banner{background:linear-gradient(135deg,#ff5fa2,#e8306f);color:#fff;text-align:center;padding:14px 16px}
+.weekcal-banner .range{font-family:"Playfair Display",serif;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;margin:0}
+.weekcal-banner h3{font-family:"Playfair Display",serif;font-weight:700;font-size:1.25rem;margin:4px 0 0}
+.weekcal-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.weekcal-grid{display:grid;grid-template-columns:repeat(7,1fr);min-width:720px}
+.cal-day{padding:12px 8px 14px;border-right:1px solid #f3d6e0;min-height:156px;background:#fff}
+.cal-day:last-child{border-right:0}
+.cal-day .dow{display:block;font-family:"Playfair Display",serif;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--pink)}
+.cal-day .date{display:block;font-family:"Abril Fatface",serif;font-size:1.85rem;line-height:1;margin:6px 0 10px}
+.cal-day .event{background:linear-gradient(135deg,#fff,var(--blush));border:1px solid #f0cbd8;border-radius:10px;padding:8px 7px}
+.cal-day .event strong{display:block;font-family:"Playfair Display",serif;font-size:.72rem;letter-spacing:.04em;text-transform:uppercase}
+.cal-day .event span{display:block;font-size:.86rem;line-height:1.3;color:#7a4a5c;margin-top:2px}
+.cal-day.today{background:linear-gradient(180deg,#fff3c4,#ffe0ec)}
+.cal-day.today .date{color:var(--hot)}
+.cal-day.today .dow:after{content:" · Today";color:var(--hot);letter-spacing:.06em}
 .note{font-style:italic;font-size:1rem;color:#7a4a5c}
 ul.list{padding-left:0;list-style:none;margin:8px 0}
 ul.list li{padding:6px 0 6px 26px;border-bottom:1px dotted var(--rule);position:relative}
@@ -126,14 +142,14 @@ footer p{margin:6px 0}
 <p class="script">the fabulous</p>
 <h1><span class="gold">Chuck’s Reserve</span><br><span class="gold" style="font-size:.45em;letter-spacing:.2em">CHRONICLE</span></h1>
 <div class="dbl"><p class="tag">An independent thrift store · Historic Main Street, Garden Grove</p></div>
-<div class="collab">In collaboration with <b>Copper Penny Farms</b> and <b><a href="https://studio.stargoatstudios.here.now/" target="_blank" rel="noopener">STAR GOAT STUDIOS</a></b></div>
+<div class="collab">In collaboration with <b>Copper Penny Farms</b>, <b><a href="https://studio.stargoatstudios.here.now/" target="_blank" rel="noopener">STAR GOAT STUDIOS</a></b>, and <b><a href="https://www.facebook.com/people/Eros-Wedding-Officiant/100095280175621/" target="_blank" rel="noopener">Eros Officiant</a></b></div>
 <div class="ctas">
 <a class="btn pink" href="https://www.google.com/maps/search/?api=1&amp;query=12946+Main+Street+Garden+Grove+CA+92840" target="_blank" rel="noopener">Get Directions</a>
 <a class="btn goldb" href="tel:+13103408988">Call</a>
 <a class="btn line" href="sms:+13103408988">Text</a>
 </div>
 <div id="status" class="badge"><span class="dot"></span><span id="statusText">Checking hours…</span></div>
-<nav><a href="#about">About</a><a href="#finds">Finds</a><a href="#shop">The Shop</a><a href="#evenings">Evenings</a><a href="#community">Community</a><a href="#auction">Auction</a><a href="#live">Live Auction</a><a href="#hours">Hours</a><a href="#visit">Visit</a><a href="#donations">Donate</a><a href="#contact">Contact</a></nav>
+<nav><a href="#about">About</a><a href="#finds">Finds</a><a href="#shop">The Shop</a><a href="#evenings">Evenings</a><a href="#community">Community</a><a href="#ministry">Ministry</a><a href="#auction">Auction</a><a href="#live">Live Auction</a><a href="#hours">Hours</a><a href="#visit">Visit</a><a href="#donations">Donate</a><a href="#contact">Contact</a></nav>
 </header>
 
 <main>
@@ -181,15 +197,7 @@ footer p{margin:6px 0}
 <p class="kicker">After Dark on Main</p>
 <h2>Evening <em>Calendar</em></h2>
 <p>Every day from 6:00 PM to 9:00 PM, we host gatherings in the cleared front of the shop. Activities include, but are not limited to, repurposing classes, confidence-building activities, live camera performance, art classes, music classes, book club, and knitting class.</p>
-<table><thead><tr><th>Day</th><th>Evening Program</th></tr></thead><tbody>
-<tr data-d="1"><td>Monday</td><td>6:00 PM – 9:00 PM · Classes &amp; gatherings</td></tr>
-<tr data-d="2"><td>Tuesday</td><td>6:00 PM – 9:00 PM · Classes &amp; gatherings</td></tr>
-<tr data-d="3"><td>Wednesday</td><td>6:00 PM – 9:00 PM · Classes &amp; gatherings</td></tr>
-<tr data-d="4"><td>Thursday</td><td>6:00 PM – 9:00 PM · Classes &amp; gatherings</td></tr>
-<tr data-d="5"><td>Friday</td><td>6:00 PM – 9:00 PM · Classes &amp; gatherings</td></tr>
-<tr data-d="6"><td>Saturday</td><td>6:00 PM – 9:00 PM · Classes &amp; gatherings</td></tr>
-<tr data-d="0"><td>Sunday</td><td>6:00 PM – 9:00 PM · Classes &amp; gatherings</td></tr>
-</tbody></table>
+<div class="weekcal" aria-label="This week’s evening calendar"><div class="weekcal-banner"><p class="range" id="calRange">This Week</p><h3>Evenings · 6:00 PM – 9:00 PM</h3></div><div class="weekcal-scroll"><div class="weekcal-grid" id="weekCal"><div class="cal-day" data-d="0"><span class="dow">Sun</span><span class="date"></span><div class="event"><strong>6:00–9:00 PM</strong><span>Classes &amp; gatherings</span></div></div><div class="cal-day" data-d="1"><span class="dow">Mon</span><span class="date"></span><div class="event"><strong>6:00–9:00 PM</strong><span>Classes &amp; gatherings</span></div></div><div class="cal-day" data-d="2"><span class="dow">Tue</span><span class="date"></span><div class="event"><strong>6:00–9:00 PM</strong><span>Classes &amp; gatherings</span></div></div><div class="cal-day" data-d="3"><span class="dow">Wed</span><span class="date"></span><div class="event"><strong>6:00–9:00 PM</strong><span>Classes &amp; gatherings</span></div></div><div class="cal-day" data-d="4"><span class="dow">Thu</span><span class="date"></span><div class="event"><strong>6:00–9:00 PM</strong><span>Classes &amp; gatherings</span></div></div><div class="cal-day" data-d="5"><span class="dow">Fri</span><span class="date"></span><div class="event"><strong>6:00–9:00 PM</strong><span>Classes &amp; gatherings</span></div></div><div class="cal-day" data-d="6"><span class="dow">Sat</span><span class="date"></span><div class="event"><strong>6:00–9:00 PM</strong><span>Classes &amp; gatherings</span></div></div></div></div></div>
 <p class="note">Call or text <a href="tel:+13103408988">(310) 340-8988</a> to ask what’s on tonight. The lineup can change, and we add new gatherings as they come.</p>
 <div class="programs">
 <div class="card"><svg viewBox="0 0 48 48" fill="none" stroke="#e8306f" stroke-width="2.5" stroke-linejoin="round"><path d="M16 10h16l6 8-14 20L10 18z"/><path d="M10 18h28"/></svg><h3>Repurposing</h3><p>Give old pieces a new life</p></div>
@@ -213,6 +221,14 @@ footer p{margin:6px 0}
 </div>
 </section>
 
+<section id="ministry">
+<p class="kicker">Love &amp; Ceremony</p>
+<h2>The Ministry for <em>Eros Officiant</em></h2>
+<p>A wedding and ceremonial officiant ministry. Visit Eros Officiant to learn more, or ask at the shop if you are planning a ceremony.</p>
+<div class="ctas" style="justify-content:flex-start;margin-top:14px">
+<a class="btn pink" href="https://www.facebook.com/people/Eros-Wedding-Officiant/100095280175621/" target="_blank" rel="noopener">Visit Eros Officiant</a>
+</div>
+</section>
 
 <section id="auction">
 <p class="kicker">On the Block</p>
@@ -309,7 +325,7 @@ footer p{margin:6px 0}
 <p class="script">xoxo, Chuck’s Reserve</p>
 <p><strong>12946 Main Street, Garden Grove, CA 92840</strong></p>
 <p>Call or text <a href="tel:+13103408988">(310) 340-8988</a> · <a href="sms:+13103408988">Send a text</a></p>
-<div class="collab">In collaboration with <b>Copper Penny Farms</b> and <b><a href="https://studio.stargoatstudios.here.now/" target="_blank" rel="noopener">STAR GOAT STUDIOS</a></b></div>
+<div class="collab">In collaboration with <b>Copper Penny Farms</b>, <b><a href="https://studio.stargoatstudios.here.now/" target="_blank" rel="noopener">STAR GOAT STUDIOS</a></b>, and <b><a href="https://www.facebook.com/people/Eros-Wedding-Officiant/100095280175621/" target="_blank" rel="noopener">Eros Officiant</a></b></div>
 <p class="small" style="margin-top:14px">Hours may change for Main Street events—call to confirm.</p>
 <p class="small">© <span id="yr"></span> Chuck’s Reserve · Historic Main Street, Garden Grove</p>
 </footer>
@@ -318,7 +334,23 @@ footer p{margin:6px 0}
 (function(){
 var n=new Date(new Date().toLocaleString("en-US",{timeZone:"America/Los_Angeles"}));
 var d=n.getDay(),m=n.getHours()*60+n.getMinutes();
-document.querySelectorAll('tr[data-d="'+d+'"]').forEach(function(row){row.classList.add('today');});
+document.querySelectorAll('[data-d="'+d+'"]').forEach(function(el){el.classList.add('today');});
+var start=new Date(n.getFullYear(),n.getMonth(),n.getDate()-d);
+var months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+document.querySelectorAll("#weekCal .cal-day").forEach(function(el){
+  var i=parseInt(el.getAttribute("data-d"),10);
+  var dt=new Date(start.getFullYear(),start.getMonth(),start.getDate()+i);
+  var dateEl=el.querySelector(".date");
+  if(dateEl) dateEl.textContent=dt.getDate();
+});
+var end=new Date(start.getFullYear(),start.getMonth(),start.getDate()+6);
+function md(dt){return months[dt.getMonth()]+" "+dt.getDate();}
+var rangeEl=document.getElementById("calRange");
+if(rangeEl){
+  rangeEl.textContent=start.getMonth()===end.getMonth()
+    ? months[start.getMonth()]+" "+start.getDate()+"–"+end.getDate()+", "+end.getFullYear()
+    : md(start)+" – "+md(end)+", "+end.getFullYear();
+}
 var s=document.getElementById('status'),t=document.getElementById('statusText');
 var morning=m>=480&&m<780,evening=m>=1020&&m<1320,open=morning||evening;
 s.classList.add(open?'open':'closed');
