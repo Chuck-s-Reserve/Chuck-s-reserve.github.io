@@ -119,6 +119,8 @@ tr.today td:first-child:after{content:" ✦ Today";color:var(--hot);font-size:.8
 .cal-day.today{background:linear-gradient(180deg,#fff3c4,#ffe0ec)}
 .cal-day.today .date{color:var(--hot)}
 .cal-day.today .dow:after{content:" · Today";color:var(--hot);letter-spacing:.06em}
+.cal-day .event.featured{border-color:#c9962c;background:linear-gradient(135deg,#fff8e4,#ffe0ec)}
+.cal-day .event.featured span+span{font-size:.78rem;color:#8a5a2b;font-style:italic}
 .note{font-style:italic;font-size:1rem;color:#7a4a5c}
 ul.list{padding-left:0;list-style:none;margin:8px 0}
 ul.list li{padding:6px 0 6px 26px;border-bottom:1px dotted var(--rule);position:relative}
@@ -337,11 +339,21 @@ var d=n.getDay(),m=n.getHours()*60+n.getMinutes();
 document.querySelectorAll('[data-d="'+d+'"]').forEach(function(el){el.classList.add('today');});
 var start=new Date(n.getFullYear(),n.getMonth(),n.getDate()-d);
 var months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+var specials={"2026-11-07":{title:"Organization and Planning",by:"Taught by Steven Gray"}};
+function ymd(dt){var mm=dt.getMonth()+1,dd=dt.getDate();return dt.getFullYear()+"-"+(mm<10?"0":"")+mm+"-"+(dd<10?"0":"")+dd;}
 document.querySelectorAll("#weekCal .cal-day").forEach(function(el){
   var i=parseInt(el.getAttribute("data-d"),10);
   var dt=new Date(start.getFullYear(),start.getMonth(),start.getDate()+i);
   var dateEl=el.querySelector(".date");
   if(dateEl) dateEl.textContent=dt.getDate();
+  var ev=specials[ymd(dt)];
+  if(ev){
+    var box=el.querySelector(".event");
+    if(box){
+      box.className="event featured";
+      box.innerHTML="<strong>6:00–9:00 PM</strong><span>"+ev.title+"</span>"+(ev.by?"<span>"+ev.by+"</span>":"");
+    }
+  }
 });
 var end=new Date(start.getFullYear(),start.getMonth(),start.getDate()+6);
 function md(dt){return months[dt.getMonth()]+" "+dt.getDate();}
