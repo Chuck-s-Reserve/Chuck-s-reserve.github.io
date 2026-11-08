@@ -92,6 +92,15 @@ h3{font-family:"Playfair Display",serif;font-weight:700;font-size:1.2rem;margin:
 .lot-photos{display:grid;gap:12px}
 .lot-photos img{width:100%;height:auto;border-radius:14px;border:1px solid #e7c2cf;background:#fff;display:block}
 .bid{font-family:"Playfair Display",serif;font-weight:900;font-size:clamp(1.5rem,5vw,2.1rem);color:var(--hot);margin:10px 0 6px}
+.season-banner{margin:14px 0 0;padding:11px 16px;border-radius:999px;background:linear-gradient(90deg,#7a3410,#c2410c 28%,#166534 72%,#9f1239);color:#fff8e7;font-family:"Playfair Display",serif;font-size:clamp(.72rem,2.4vw,.86rem);letter-spacing:.12em;text-transform:uppercase;text-align:center;box-shadow:0 6px 16px rgba(122,52,16,.2)}
+.holiday-note{margin-top:16px}
+.sale-widget{margin:16px 0 12px;padding:18px 16px 16px;border-radius:18px;text-align:center;color:#fff;background:linear-gradient(145deg,#9f1239 0%,#e8306f 42%,#c2410c 78%,#c9962c 100%);box-shadow:0 12px 30px rgba(159,18,57,.32),inset 0 0 0 3px rgba(255,242,184,.55)}
+.sale-widget .slash{font-family:"Playfair Display",serif;letter-spacing:.22em;text-transform:uppercase;font-size:.78rem;margin:0}
+.sale-widget .off{font-family:"Abril Fatface",serif;font-size:clamp(2.2rem,9vw,3.4rem);line-height:.95;margin:6px 0 4px;color:#fff2b8;text-shadow:0 2px 0 rgba(58,38,6,.25)}
+.sale-widget .was{margin:0;font-size:1.05rem}
+.sale-widget .was s{text-decoration:line-through;text-decoration-thickness:2px}
+.sale-widget .bid{color:#fff2b8;margin:6px 0 4px}
+.sale-widget .wow{margin:0;font-style:italic;font-size:1.02rem;color:#fff8e7}
 @media(min-width:720px){.grid{grid-template-columns:repeat(5,1fr)}.programs{grid-template-columns:repeat(4,1fr)}.layout{grid-template-columns:repeat(3,1fr)}.lot{grid-template-columns:1.1fr .9fr;align-items:start}}
 .card{background:#fff;border:1px solid #f0cbd8;border-radius:14px;padding:16px 12px;text-align:center;box-shadow:0 4px 14px rgba(232,80,143,.08);position:relative;overflow:hidden}
 .card:after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 40%,rgba(255,255,255,.7) 50%,transparent 60%);transform:translateX(-100%);animation:sweep 5s ease-in-out infinite}
@@ -137,13 +146,14 @@ footer p{margin:6px 0}
 <div class="wrap">
 <header>
 <div class="topline"><span>Garden Grove, Calif.</span><span>★ Est. on Main ★</span><span>Price: A Steal</span></div>
-<div class="vol">Vol. I · No. 1 — Historic Main Street Edition</div>
+<div class="vol">Vol. I · No. 1 — Grateful Season &amp; Christmas Edition</div>
 <div class="brands">
 <img class="logo-stamp" src="logo-stamp.png" alt="Chuck’s Reserve Thrift Store" width="210" height="210">
 </div>
 <p class="script">the fabulous</p>
 <h1><span class="gold">Chuck’s Reserve</span><br><span class="gold" style="font-size:.45em;letter-spacing:.2em">CHRONICLE</span></h1>
 <div class="dbl"><p class="tag">An independent thrift store · Historic Main Street, Garden Grove</p></div>
+<p class="season-banner">Thanksgiving gratitude on Main Street · Christmas finds are in</p>
 <div class="collab">In collaboration with <b>Copper Penny Farms</b>, <b><a href="https://studio.stargoatstudios.here.now/" target="_blank" rel="noopener">STAR GOAT STUDIOS</a></b>, and <b><a href="https://www.facebook.com/people/Eros-Wedding-Officiant/100095280175621/" target="_blank" rel="noopener">Eros Officiant</a></b></div>
 <div class="ctas">
 <a class="btn pink" href="https://www.google.com/maps/search/?api=1&amp;query=12946+Main+Street+Garden+Grove+CA+92840" target="_blank" rel="noopener">Get Directions</a>
@@ -176,6 +186,13 @@ footer p{margin:6px 0}
 <div class="card"><svg viewBox="0 0 48 48" fill="none" stroke="#e8306f" stroke-width="2.5" stroke-linejoin="round"><path d="M24 12c-5-4-12-4-16-2v28c4-2 11-2 16 2 5-4 12-4 16-2V10c-4-2-11-2-16 2zM24 12v28"/></svg><h3>Books</h3><p>Page-turners on the cheap</p></div>
 <div class="card"><svg viewBox="0 0 48 48" fill="none" stroke="#c9962c" stroke-width="2.5"><path d="M24 4l5 14h15l-12 9 5 15-13-9-13 9 5-15L4 18h15z"/></svg><h3>Décor</h3><p>Frames, lamps &amp; little luxuries</p></div>
 <div class="card"><svg viewBox="0 0 48 48" fill="none" stroke="#e8306f" stroke-width="2.5"><path d="M24 6l3 9 9 3-9 3-3 9-3-9-9-3 9-3zM38 30l1.5 4.5L44 36l-4.5 1.5L38 42l-1.5-4.5L32 36l4.5-1.5z"/></svg><h3>Everyday Finds</h3><p>The surprise you didn’t know you needed</p></div>
+<div class="card"><svg viewBox="0 0 48 48" fill="none" stroke="#166534" stroke-width="2.5" stroke-linejoin="round"><path d="M24 42V18"/><path d="M24 36c-8 0-12-6-12-6s6-2 12-2 12 2 12 2-4 6-12 6z"/><path d="M24 28c-7 0-11-5-11-5s5-2 11-2 11 2 11 2-4 5-11 5z"/><path d="M24 20c-6 0-9-5-9-5s4-2 9-2 9 2 9 2-3 5-9 5z"/><circle cx="24" cy="12" r="3" fill="#c2410c" stroke="#c2410c"/></svg><h3>Christmas Finds</h3><p>The shop is full of Christmas décor and holiday pieces ready for a new home</p></div>
+</div>
+<div class="cols holiday-note">
+<div class="box"><p class="head">A Grateful Season</p>
+<p>This Thanksgiving, we’re grateful for our Historic Main Street neighbors, the folks who donate, and everyone who stops in to browse, gather, and give things a second life.</p></div>
+<div class="box"><p class="head">Christmas Is Here</p>
+<p>The racks and shelves are filling with Christmas finds — ornaments, décor, and holiday pieces waiting for their next celebration. Come see what’s in before the season gets away.</p></div>
 </div>
 </section>
 
@@ -233,7 +250,7 @@ footer p{margin:6px 0}
 </section>
 
 <section id="auction">
-<p class="kicker">On the Block</p>
+<p class="kicker">Holiday Slash</p>
 <h2>Weekly <em>Auction</em></h2>
 <p>Each week we put a special find on the block. Bid by phone or text, stop by the shop during open hours, or jump in when we go live.</p>
 <div class="lot">
@@ -245,7 +262,13 @@ footer p{margin:6px 0}
 <p class="head">This Week’s Lot</p>
 <h3>Schuco Porsche 917 · Weltmeister 1970</h3>
 <p>A vintage Schuco toy marked 356 213 on the underside, with “Porsche 917 Weltmeister 1970,” plus the stamped figures 580 PS, 330 km/h, and 5000 ccm. It wears Gulf colors: silver-blue body, orange-red center stripe, number 3, and Gulf roundels on the nose.</p>
-<p class="bid">Starting bid $60</p>
+<div class="sale-widget" id="saleWidget">
+<p class="slash">Big deal · Starting bid slashed</p>
+<p class="off">50% Off</p>
+<p class="was">Was <s>$60</s></p>
+<p class="bid">Starting bid $30</p>
+<p class="wow">Half off this classic Schuco — don’t let it roll away!</p>
+</div>
 <p class="note">Call or text (310) 340-8988 to place a bid. Sold as shown — a well-loved shop find with the honest wear you can see in the photos.</p>
 <div class="ctas" style="justify-content:flex-start;margin-top:12px">
 <a class="btn pink" href="tel:+13103408988">Call to Bid</a>
