@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Store","name":"Chuck's Reserve","description":"Community thrift store on Historic Main Street in Garden Grove, built on neighbors helping neighbors through secondhand finds, shared skills, service, and faith freely offered. Evening gatherings from 6 to 9 PM.","telephone":"+1-310-340-8988","address":{"@type":"PostalAddress","streetAddress":"12946 Main Street","addressLocality":"Garden Grove","addressRegion":"CA","postalCode":"92840","addressCountry":"US"},"openingHours":["Mo-Su 09:00-13:00","Mo-Su 17:00-22:00"],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"09:00","closes":"13:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"17:00","closes":"22:00"}],"specialOpeningHoursSpecification":[{"@type":"OpeningHoursSpecification","validFrom":"2026-11-08","validThrough":"2026-11-08","opens":"10:00","closes":"17:00"}],"paymentAccepted":"Cash, Zelle","hasMap":"https://www.google.com/maps/search/?api=1&query=12946+Main+Street+Garden+Grove+CA+92840"}
+{"@context":"https://schema.org","@type":"Store","name":"Chuck's Reserve","description":"Community thrift store on Historic Main Street in Garden Grove, built on neighbors helping neighbors through secondhand finds, shared skills, service, and faith freely offered. Evening gatherings from 6 to 9 PM.","telephone":"+1-310-340-8988","address":{"@type":"PostalAddress","streetAddress":"12946 Main Street","addressLocality":"Garden Grove","addressRegion":"CA","postalCode":"92840","addressCountry":"US"},"openingHours":["Mo-Su 08:00-13:00","Mo-Su 17:00-21:15"],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:00","closes":"13:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"17:00","closes":"21:15"}],"paymentAccepted":"Cash, Zelle","hasMap":"https://www.google.com/maps/search/?api=1&query=12946+Main+Street+Garden+Grove+CA+92840"}
 </script>
 <style>
 :root{--ink:#3a1f2b;--pink:#e8508f;--hot:#ff2d87;--blush:#fbe3ea;--cream:#fff8f1;--rule:#d9a9b8;
@@ -312,15 +312,15 @@ footer p{margin:6px 0}
 <p class="kicker">Daily Schedule</p>
 <h2>Store <em>Hours</em></h2>
 <table><thead><tr><th>Day</th><th>Hours</th></tr></thead><tbody>
-<tr data-d="1"><td>Monday</td><td>9:00 AM – 1:00 PM, 5:00 PM – 10:00 PM</td></tr>
-<tr data-d="2"><td>Tuesday</td><td>9:00 AM – 1:00 PM, 5:00 PM – 10:00 PM</td></tr>
-<tr data-d="3"><td>Wednesday</td><td>9:00 AM – 1:00 PM, 5:00 PM – 10:00 PM</td></tr>
-<tr data-d="4"><td>Thursday</td><td>9:00 AM – 1:00 PM, 5:00 PM – 10:00 PM</td></tr>
-<tr data-d="5"><td>Friday</td><td>9:00 AM – 1:00 PM, 5:00 PM – 10:00 PM</td></tr>
-<tr data-d="6"><td>Saturday</td><td>9:00 AM – 1:00 PM, 5:00 PM – 10:00 PM</td></tr>
-<tr data-d="0"><td>Sunday</td><td>9:00 AM – 1:00 PM, 5:00 PM – 10:00 PM</td></tr>
+<tr data-d="1"><td>Monday</td><td>8:00 AM – 1:00 PM, 5:00 PM – 9:15 PM</td></tr>
+<tr data-d="2"><td>Tuesday</td><td>8:00 AM – 1:00 PM, 5:00 PM – 9:15 PM</td></tr>
+<tr data-d="3"><td>Wednesday</td><td>8:00 AM – 1:00 PM, 5:00 PM – 9:15 PM</td></tr>
+<tr data-d="4"><td>Thursday</td><td>8:00 AM – 1:00 PM, 5:00 PM – 9:15 PM</td></tr>
+<tr data-d="5"><td>Friday</td><td>8:00 AM – 1:00 PM, 5:00 PM – 9:15 PM</td></tr>
+<tr data-d="6"><td>Saturday</td><td>8:00 AM – 1:00 PM, 5:00 PM – 9:15 PM</td></tr>
+<tr data-d="0"><td>Sunday</td><td>8:00 AM – 1:00 PM, 5:00 PM – 9:15 PM</td></tr>
 </tbody></table>
-<p class="note" id="specialHoursNote">Special hours today, Sunday, November 8: 10:00 AM – 5:00 PM.</p>
+<p class="note">Every day, unless otherwise posted.</p>
 <p class="note">Evening programs run 6:00 PM – 9:00 PM. See the <a href="#evenings">evening calendar</a>.</p>
 <p class="note">Hours may change for Main Street events—call to confirm.</p>
 </section>
@@ -394,11 +394,9 @@ if(rangeEl){
     ? months[start.getMonth()]+" "+start.getDate()+"–"+end.getDate()+", "+end.getFullYear()
     : md(start)+" – "+md(end)+", "+end.getFullYear();
 }
-var hourSpecials={"2026-11-08":{label:"10:00 AM – 5:00 PM",start:600,end:1020,until:"5 PM",opensAt:"10 AM"}};
+var hourSpecials={};
 var todayKey=ymd(n);
 var hs=hourSpecials[todayKey];
-var specialNote=document.getElementById("specialHoursNote");
-if(specialNote&&todayKey>"2026-11-08") specialNote.remove();
 if(hs){
   var cell=document.querySelector('#hours tr[data-d="'+d+'"] td:last-child');
   if(cell) cell.textContent=hs.label;
@@ -409,15 +407,15 @@ if(hs){
   s.classList.add(open?'open':'closed');
   if(open){t.textContent="Open now · until "+hs.until;}
   else if(m<hs.start){t.textContent="Closed now · opens today at "+hs.opensAt;}
-  else{t.textContent="Closed now · opens tomorrow at 9 AM";}
+  else{t.textContent="Closed now · opens tomorrow at 8 AM";}
 }else{
-  var morning=m>=540&&m<780,evening=m>=1020&&m<1320,open=morning||evening;
+  var morning=m>=480&&m<780,evening=m>=1020&&m<1275,open=morning||evening;
   s.classList.add(open?'open':'closed');
   if(morning){t.textContent="Open now · until 1 PM";}
-  else if(evening){t.textContent="Open now · until 10 PM";}
-  else if(m<540){t.textContent="Closed now · opens today at 9 AM";}
+  else if(evening){t.textContent="Open now · until 9:15 PM";}
+  else if(m<480){t.textContent="Closed now · opens today at 8 AM";}
   else if(m<1020){t.textContent="Closed now · opens today at 5 PM";}
-  else{t.textContent="Closed now · opens tomorrow at 9 AM";}
+  else{t.textContent="Closed now · opens tomorrow at 8 AM";}
 }
 document.getElementById('yr').textContent=n.getFullYear();
 var auction={youtubeChannelId:"",youtubeVideoId:"",tiktokUsername:"",tiktokVideoId:""};
