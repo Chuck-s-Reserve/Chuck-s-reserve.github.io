@@ -370,7 +370,7 @@ var d=n.getDay(),m=n.getHours()*60+n.getMinutes();
 document.querySelectorAll('[data-d="'+d+'"]').forEach(function(el){el.classList.add('today');});
 var start=new Date(n.getFullYear(),n.getMonth(),n.getDate()-d);
 var months=["January","February","March","April","May","June","July","August","September","October","November","December"];
-var specials={"2026-11-07":{title:"Organization and Planning",by:"Taught by Steven Gray"},"2026-11-08":{title:"Wisdom of the Ancients",by:"Special guest TBA",whisper:"A wizard arrives exactly when he intended — even they don’t know it yet."}};
+var specials={"2026-11-07":{title:"Organization and Planning",by:"Taught by Steven Gray"},"2026-11-08":{title:"Wisdom of the Ancients",by:"Special guest TBA"}};
 function ymd(dt){var mm=dt.getMonth()+1,dd=dt.getDate();return dt.getFullYear()+"-"+(mm<10?"0":"")+mm+"-"+(dd<10?"0":"")+dd;}
 document.querySelectorAll("#weekCal .cal-day").forEach(function(el){
   var i=parseInt(el.getAttribute("data-d"),10);
@@ -382,7 +382,7 @@ document.querySelectorAll("#weekCal .cal-day").forEach(function(el){
     var box=el.querySelector(".event");
     if(box){
       box.className="event featured";
-      box.innerHTML="<strong>6:00–9:00 PM</strong><span>"+ev.title+"</span>"+(ev.by?"<span>"+ev.by+"</span>":"")+(ev.whisper?"<span>"+ev.whisper+"</span>":"");
+      box.innerHTML="<strong>6:00–9:00 PM</strong><span>"+ev.title+"</span>"+(ev.by?"<span>"+ev.by+"</span>":"");
     }
   }
 });
