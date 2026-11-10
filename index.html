@@ -370,7 +370,7 @@ var d=n.getDay(),m=n.getHours()*60+n.getMinutes();
 document.querySelectorAll('[data-d="'+d+'"]').forEach(function(el){el.classList.add('today');});
 var start=new Date(n.getFullYear(),n.getMonth(),n.getDate()-d);
 var months=["January","February","March","April","May","June","July","August","September","October","November","December"];
-var specials={"2026-11-07":{title:"Organization and Planning",by:"Taught by Steven Gray"},"2026-11-08":{title:"Wisdom of the Ancients",by:"Special guest TBA"},"2026-11-09":{title:"Being",by:"Taught by Steven Gray"},"2026-11-10":{title:"Prayer Practice",by:"Led by Steven Gray"},"2026-11-11":{title:"Om &amp; the Sounds of the Universe",by:"Led by Steven Gray"},"2026-11-12":{title:"Repurposing the Living",by:"Hosted by Steven Gray"},"2026-11-13":{title:"Story-time Reading",by:"With Steven Gray"}};
+var specials={"2026-11-07":{title:"Organization and Planning",by:"Taught by Steven Gray"},"2026-11-08":{title:"Wisdom of the Ancients",by:"Special guest TBA"},"2026-11-09":{title:"Being — Cancelled tonight",by:"Doors reopen tomorrow at 8 AM"},"2026-11-10":{title:"Prayer Practice",by:"Led by Steven Gray"},"2026-11-11":{title:"Om &amp; the Sounds of the Universe",by:"Led by Steven Gray"},"2026-11-12":{title:"Repurposing the Living",by:"Hosted by Steven Gray"},"2026-11-13":{title:"Story-time Reading",by:"With Steven Gray"}};
 function ymd(dt){var mm=dt.getMonth()+1,dd=dt.getDate();return dt.getFullYear()+"-"+(mm<10?"0":"")+mm+"-"+(dd<10?"0":"")+dd;}
 document.querySelectorAll("#weekCal .cal-day").forEach(function(el){
   var i=parseInt(el.getAttribute("data-d"),10);
