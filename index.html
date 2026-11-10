@@ -46,7 +46,6 @@ a{color:var(--pink)}
 .logo-mark{float:right;width:min(128px,34vw);height:auto;margin:4px 0 14px 18px}
 @media(max-width:719px){.logo-mark{float:none;display:block;margin:0 auto 16px}}
 .streams{display:grid;gap:16px}
-@media(min-width:720px){.streams{grid-template-columns:1fr 1fr}}
 .stream h3{margin-bottom:8px}
 .frame{position:relative;aspect-ratio:16/9;background:#2a1520;border-radius:14px;overflow:hidden;border:1px solid #e7c2cf}
 .frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
@@ -287,7 +286,7 @@ footer p{margin:6px 0}
 <section id="live">
 <p class="kicker">Going Once, Going Twice</p>
 <h2>Live <em>Auction</em></h2>
-<p>Bid along from home while we pull pieces off the floor. Streams run on YouTube and TikTok—watch either (or both) right here when we go live.</p>
+<p>Bid along from home while we pull pieces off the floor. Watch the stream right here when we go live.</p>
 <div class="streams">
 <div class="stream">
 <h3>YouTube</h3>
@@ -295,16 +294,9 @@ footer p{margin:6px 0}
 <iframe src="https://streamyard.com/e/86m3zb3744ws" width="100%" height="100%" frameborder="0" title="Embed recording" allowfullscreen style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe>
 </div>
 </div>
-<div class="stream">
-<h3>TikTok</h3>
-<div class="frame" id="ttFrame">
-<div class="offline" id="ttOffline"><p>We’ll be live on TikTok too.</p><span>The TikTok auction will appear here.</span></div>
-</div>
-</div>
 </div>
 <div class="ctas" id="liveLinks" hidden>
 <a class="btn pink" id="ytLink" href="#" target="_blank" rel="noopener">Watch on YouTube</a>
-<a class="btn line" id="ttLink" href="#" target="_blank" rel="noopener">Watch on TikTok</a>
 </div>
 </section>
 
@@ -418,20 +410,13 @@ if(hs){
   else{t.textContent="Closed now · opens tomorrow at 8 AM";}
 }
 document.getElementById('yr').textContent=n.getFullYear();
-var auction={youtubeChannelId:"",youtubeVideoId:"",tiktokUsername:"",tiktokVideoId:""};
-function addFrame(host,src){var f=document.createElement("iframe");f.src=src;f.allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture;web-share";f.allowFullscreen=true;f.title=host==="ytFrame"?"YouTube live auction":"TikTok live auction";hostEl=document.getElementById(host);var off=hostEl.querySelector(".offline");if(off)off.remove();hostEl.appendChild(f);}
+var auction={youtubeChannelId:"",youtubeVideoId:""};
+function addFrame(host,src){var f=document.createElement("iframe");f.src=src;f.allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture;web-share";f.allowFullscreen=true;f.title="YouTube live auction";hostEl=document.getElementById(host);var off=hostEl.querySelector(".offline");if(off)off.remove();hostEl.appendChild(f);}
 var links=document.getElementById("liveLinks"),show=false;
 if(auction.youtubeVideoId||auction.youtubeChannelId){
   var ysrc=auction.youtubeVideoId?"https://www.youtube.com/embed/"+auction.youtubeVideoId+"?rel=0":"https://www.youtube.com/embed/live_stream?channel="+auction.youtubeChannelId;
   addFrame("ytFrame",ysrc);
   document.getElementById("ytLink").href=auction.youtubeVideoId?"https://www.youtube.com/watch?v="+auction.youtubeVideoId:"https://www.youtube.com/channel/"+auction.youtubeChannelId+"/live";
-  show=true;
-}
-if(auction.tiktokVideoId||auction.tiktokUsername){
-  if(auction.tiktokVideoId) addFrame("ttFrame","https://www.tiktok.com/player/v1/"+auction.tiktokVideoId+"?music_info=0&description=1");
-  var tt="https://www.tiktok.com/"+(auction.tiktokUsername?(auction.tiktokUsername.indexOf("@")===0?auction.tiktokUsername:"@"+auction.tiktokUsername):"");
-  if(auction.tiktokUsername) document.getElementById("ttLink").href=tt+(auction.tiktokUsername?"/live":"");
-  if(auction.tiktokVideoId) document.getElementById("ttLink").href="https://www.tiktok.com/embed/v2/"+auction.tiktokVideoId;
   show=true;
 }
 if(show) links.hidden=false;
